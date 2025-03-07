@@ -7,42 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu des Allumettes</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <script>
-
-        let allumettes = 50;
-
-        function retirerAllumettes(nbAllumettesQuiRestent, nbARetirer) {
-            if (nbARetirer < 1 || nbARetirer > 6) {
-                alert("Erreur : Vous devez retirer entre 1 et 6 allumettes.");
-                return nbAllumettesQuiRestent; // Le nombre ne change pas même si le chiffre est pas bon
-            }
-
-            nbAllumettesQuiRestent = nbAllumettesQuiRestent - nbARetirer;
-
-            return nbAllumettesQuiRestent; // Retourne le nouveau nombre d'allumettes
-    }
-
-                while (allumettes > 0) {
-                    let nbARetirer = Number(prompt(`Il reste ${allumettes} allumettes. Combien voulez-vous en retirer, de 1 à 6)`));
-
-                if (isNaN(nbARetirer) || nbARetirer < 1 || nbARetirer > 6) {
-                    alert("Erreur : Veuillez entrer un nombre valide entre 1 et 6.");
-                    continue; // Redemande un nombre correct
-                }
-
-                allumettes = retirerAllumettes(allumettes, nbARetirer);
-
-                if (allumettes === 0) {
-                    alert("Bravo ! Vous avez retiré la dernière allumette, vous avez gagné !");
-                }
-    }
-
-    </script>
+    <script src="jeuDesAllumettes.js"></script>
     
 </body>
 
